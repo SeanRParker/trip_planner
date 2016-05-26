@@ -1,0 +1,17 @@
+<h1>Trips List</h1>
+
+<% if @trips.any? %>
+  <!-- loop the schools and display the links to each one -->
+  <ul>
+    <% @trips.each do |trip| %>
+      <li>
+      <%= link_to trip.name, trip_path(trip) %>
+      <!--  <a href='/school/:id'>Neumont</a> -->
+      </li>
+    <% end %>
+  </ul>
+  <% else %>
+  <h3>No trips found, please create one!</h3>
+<% end %>
+
+<%= link_to 'New Trip Plan', new_trip_path %>
