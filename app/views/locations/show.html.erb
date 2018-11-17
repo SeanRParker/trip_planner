@@ -1,0 +1,9 @@
+<h1><%= @location.name %></h1>
+<hr />
+<h2>Location name: <%= @location.name %></h2>
+<h2>Location distance: <%= @location.distance %></h2>
+<h2>Location date: <%= @location.date %></h2>
+
+<%= link_to 'See All Locations', locations_path %>
+<%= link_to 'Edit Location Plan', edit_location_path %>
+<%= link_to 'Delete Location', location_path(@location), method: :delete %>

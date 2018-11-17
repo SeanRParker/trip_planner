@@ -1,0 +1,17 @@
+<h1>Locations List</h1>
+
+<% if @locations.any? %>
+  <!-- loop the schools and display the links to each one -->
+  <ul>
+    <% @locations.each do |location| %>
+      <li>
+      <%= link_to location.name, location_path(location) %>
+      <!--  <a href='/school/:id'>Neumont</a> -->
+      </li>
+    <% end %>
+  </ul>
+  <% else %>
+  <h3>No locations found, please create one!</h3>
+<% end %>
+
+<%= link_to 'New Location Plan', new_location_path %>
